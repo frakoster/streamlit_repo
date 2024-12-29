@@ -10,7 +10,7 @@ response = requests.get(url)
 # Verificar si la respuesta fue exitosa 
 if response.status_code == 200: 
      data = response.json() 
-     df = pd.DataFrame(data['results'])  # Convertir los datos JSON en un DataFrame 
+     df = pd.DataFrame(data['results']) # Convertir los datos JSON en un DataFrame 
 else: 
     st.error("Error en la consulta de datos") 
  
