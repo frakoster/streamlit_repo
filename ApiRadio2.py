@@ -9,10 +9,10 @@ response = requests.get(url)
  
 # Verificar si la respuesta fue exitosa 
 if response.status_code == 200: 
-    data = response.json() 
-    df = pd.DataFrame(data['results']) # Convertir los datos JSON en un DataFrame 
+     data = response.json() 
+     df = pd.DataFrame(data['results'])  # Convertir los datos JSON en un DataFrame 
 else: 
-     st.error("Error en la consulta de datos") 
+    st.error("Error en la consulta de datos") 
  
 # Barra lateral 
 st.sidebar.header("Opciones de Filtro") 
@@ -32,8 +32,8 @@ df_filtrado = df[df['state'] == categoria]
  
 # Botón de actualización 
 if st.sidebar.button("Actualizar Datos"): 
-     # Código para refrescar o procesar los datos según filtros 
-    st.write("Datos actualizados") 
+    # Código para refrescar o procesar los datos según filtros 
+     st.write("Datos actualizados") 
  
 # Mostrar DataFrame filtrado 
 st.write("### Datos de Radioaficionados en Chile Según Región") 
